@@ -5,7 +5,8 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npm run lint && NODE_ENV=test c8 mocha",
+    "test:ci": "NODE_ENV=test mocha",
     "lint": "standard --fix"
   },
   "repository": {
@@ -24,6 +25,26 @@
     "qs": "6.10.1"
   },
   "devDependencies": {
+    "c8": "7.7.2",
+    "chai": "4.3.4",
+    "mocha": "8.4.0",
     "standard": "16.0.3"
+  },
+  "standard": {
+    "env": "mocha"
+  },
+  "mocha": {
+    "recursive": true,
+    "reporter": "dot",
+    "colors": true
+  },
+  "c8": {
+    "all": true,
+    "include": [
+      "src"
+    ]
+  },
+  "engines": {
+    "node": ">= 14"
   }
 }
