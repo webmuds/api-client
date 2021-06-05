@@ -4,7 +4,7 @@ import axios from 'axios'
 import axiosRetry from 'axios-retry'
 import qs from 'qs'
 
-export default class ApiClient {
+export class ApiClient {
   constructor (baseUrl, timeout = null) {
     timeout = timeout || 10000
     this.instance = axios.create({
