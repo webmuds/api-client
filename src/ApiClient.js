@@ -20,30 +20,52 @@ export class ApiClient {
     }
   }
 
-  get (path, params) {
+  get (path, params, config = null) {
     if (params) {
       path = `${path}${qs.stringify(params, this.qsOptions)}`
     }
-    return this.instance.get(path).then(response => response.data)
+    return this
+      .instance
+      .get(path, config)
+      .then(responseData)
   }
 
-  post (path, data) {
-    return this.instance.post(path, data).then(response => response.data)
+  post (path, data, config = null) {
+    return this
+      .instance
+      .post(path, data, config)
+      .then(responseData)
   }
 
-  put (path, data) {
-    return this.instance.put(path, data).then(response => response.data)
+  put (path, data, config = null) {
+    return this
+      .instance
+      .put(path, data, config)
+      .then(responseData)
   }
 
-  patch (path, data) {
-    return this.instance.patch(path, data).then(response => response.data)
+  patch (path, data, config = null) {
+    return this
+      .instance
+      .patch(path, data, config)
+      .then(responseData)
   }
 
-  delete (path) {
-    return this.instance.delete(path).then(response => response.data)
+  delete (path, config = null) {
+    return this
+      .instance
+      .delete(path, config)
+      .then(responseData)
   }
 
-  request (method, url, data) {
-    return this.instance.request({ method, data, url }).then(response => response.data)
+  request (method, url, data, config = null) {
+    return this
+      .instance
+      .request({ method, data, url, config })
+      .then(responseData)
   }
+}
+
+function responseData (response) {
+  return response.data
 }
