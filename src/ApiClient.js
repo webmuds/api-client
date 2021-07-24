@@ -13,7 +13,7 @@ export class ApiClient {
       withCredentials: true,
       headers: { 'Content-Type': 'application/json; charset=utf-8' }
     })
-    axiosRetry(this.instance, { retries: 1 })
+    this.retry = axiosRetry(this.instance, { retries: 1 })
     this.qsOptions = {
       encodeValuesOnly: true,
       addQueryPrefix: true
@@ -63,6 +63,10 @@ export class ApiClient {
       .instance
       .request({ method, data, url, config })
       .then(responseData)
+  }
+
+  setHeader (headerName, headerValue) {
+    this.instance.defaults.headers.common[headerName] = headerValue
   }
 }
 
