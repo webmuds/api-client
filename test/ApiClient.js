@@ -1,6 +1,6 @@
 'use strict'
 
-import { expect } from 'chai'
+import { expect } from '@dimensionalpocket/development'
 
 import ApiClient from '../index.js'
 import { ApiClient as ApiClientFromSrc } from '../src/ApiClient.js'
