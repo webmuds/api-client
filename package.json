@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/webmuds/api-client#readme",
   "dependencies": {
-    "axios": "0.26.0",
+    "axios": "0.26.1",
     "axios-retry": "3.2.4",
     "qs": "6.10.3"
   },
