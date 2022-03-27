@@ -18,23 +18,35 @@ export class ApiClient {
       encodeValuesOnly: true,
       addQueryPrefix: true
     }
+    this.returnBody = true
   }
 
   get (path, params, config = null) {
     if (params) {
       path = `${path}${qs.stringify(params, this.qsOptions)}`
     }
-    return this
+
+    var result = this
       .instance
       .get(path, config)
-      .then(responseData)
+
+    if (this.returnBody) {
+      result = result.then(responseData)
+    }
+
+    return result
   }
 
   post (path, data, config = null) {
-    return this
+    var result = this
       .instance
       .post(path, data, config)
-      .then(responseData)
+
+    if (this.returnBody) {
+      result = result.then(responseData)
+    }
+
+    return result
   }
 
   put (path, data, config = null) {
@@ -42,24 +54,39 @@ export class ApiClient {
   }
 
   patch (path, data, config = null) {
-    return this
+    var result = this
       .instance
       .patch(path, data, config)
-      .then(responseData)
+
+    if (this.returnBody) {
+      result = result.then(responseData)
+    }
+
+    return result
   }
 
   delete (path, config = null) {
-    return this
+    var result = this
       .instance
       .delete(path, config)
-      .then(responseData)
+
+    if (this.returnBody) {
+      result = result.then(responseData)
+    }
+
+    return result
   }
 
   request (method, url, data, config = null) {
-    return this
+    var result = this
       .instance
       .request({ method, data, url, config })
-      .then(responseData)
+
+    if (this.returnBody) {
+      result = result.then(responseData)
+    }
+
+    return result
   }
 
   setHeader (headerName, headerValue) {
