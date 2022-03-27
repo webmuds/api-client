@@ -25,7 +25,7 @@
     "qs": "6.10.3"
   },
   "devDependencies": {
-    "@dimensionalpocket/development": "github:dimensionalpocket/development-js#0.6.0",
+    "@dimensionalpocket/development": "github:dimensionalpocket/development-js#0.6.1",
     "@dimensionalpocket/release": "github:dimensionalpocket/release-js#0.2.4",
     "nock": "13.2.4"
   },
