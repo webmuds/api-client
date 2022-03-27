@@ -1,5 +1,7 @@
 # @dimensionalpocket/api-client
 
+[![build](https://github.com/dimensionalpocket/api-client-js/actions/workflows/node.js.yml/badge.svg)](https://github.com/dimensionalpocket/api-client-js/actions/workflows/node.js.yml) [![Total alerts](https://img.shields.io/lgtm/alerts/g/dimensionalpocket/api-client-js.svg)](https://lgtm.com/projects/g/dimensionalpocket/api-client-js/alerts/) [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/dimensionalpocket/api-client-js.svg)](https://lgtm.com/projects/g/dimensionalpocket/api-client-js/context:javascript)
+
 Generic API client for Node apps to send requests to Rails APIs developed by the studio.
 
 Included:
