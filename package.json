@@ -1,5 +1,5 @@
 {
-  "name": "@webmuds/api-client",
+  "name": "@dimensionalpocket/api-client",
   "version": "0.2.4",
   "description": "",
   "type": "module",
@@ -11,21 +11,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/webmuds/api-client.git"
+    "url": "git+https://github.com/dimensionalpocket/api-client-js.git"
   },
-  "author": "webmuds.com",
+  "author": "dimensionalpocket.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/webmuds/api-client/issues"
+    "url": "https://github.com/dimensionalpocket/api-client-js/issues"
   },
-  "homepage": "https://github.com/webmuds/api-client#readme",
+  "homepage": "https://github.com/dimensionalpocket/api-client-js#readme",
   "dependencies": {
     "axios": "0.26.1",
     "axios-retry": "3.2.4",
     "qs": "6.10.3"
   },
   "devDependencies": {
-    "@dimensionalpocket/development": "github:dimensionalpocket/development-js#0.5.3",
+    "@dimensionalpocket/development": "github:dimensionalpocket/development-js#0.6.0",
     "@dimensionalpocket/release": "github:dimensionalpocket/release-js#0.2.4"
   },
   "babel": {
@@ -47,6 +47,6 @@
     ]
   },
   "engines": {
-    "node": ">= 14.17.1"
+    "node": ">= 16.14.2"
   }
 }

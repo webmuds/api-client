@@ -6,7 +6,7 @@ import qs from 'qs'
 
 export class ApiClient {
   constructor (baseUrl, timeout = null) {
-    timeout = timeout || 10000
+    timeout = timeout || 45000
     this.instance = axios.create({
       baseURL: baseUrl,
       timeout: timeout,
@@ -38,10 +38,7 @@ export class ApiClient {
   }
 
   put (path, data, config = null) {
-    return this
-      .instance
-      .put(path, data, config)
-      .then(responseData)
+    return this.patch(path, data, config)
   }
 
   patch (path, data, config = null) {

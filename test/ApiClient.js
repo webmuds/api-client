@@ -12,7 +12,7 @@ describe('ApiClient', function () {
 
   describe('#setHeader', function () {
     before(function () {
-      this.client = new ApiClient('http://webmuds.test')
+      this.client = new ApiClient('http://example.test')
       this.client.setHeader('test-Header', 'testValue')
     })
 
