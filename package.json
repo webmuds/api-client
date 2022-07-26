@@ -27,7 +27,7 @@
   "devDependencies": {
     "@dimensionalpocket/development": "github:dimensionalpocket/development-js#0.6.1",
     "@dimensionalpocket/release": "github:dimensionalpocket/release-js#0.3.0",
-    "nock": "13.2.8"
+    "nock": "13.2.9"
   },
   "babel": {
     "extends": "./node_modules/@dimensionalpocket/development/babel"
