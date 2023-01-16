@@ -6,8 +6,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run lint && NODE_ENV=test c8 mocha",
-    "lint": "standardx --fix --verbose",
-    "release": "release-it --config ./node_modules/@dimensionalpocket/release/config/default.cjs"
+    "lint": "standardx --fix --verbose"
   },
   "repository": {
     "type": "git",
@@ -20,13 +19,12 @@
   },
   "homepage": "https://github.com/dimensionalpocket/api-client-js#readme",
   "dependencies": {
-    "axios": "0.27.2",
+    "axios": "1.1.3",
     "axios-retry": "3.3.1",
     "qs": "6.11.0"
   },
   "devDependencies": {
-    "@dimensionalpocket/development": "github:dimensionalpocket/development-js#0.7.0",
-    "@dimensionalpocket/release": "github:dimensionalpocket/release-js#0.3.3",
+    "@dimensionalpocket/development": "github:dimensionalpocket/development-js#1.0.2",
     "nock": "13.2.9"
   },
   "babel": {
