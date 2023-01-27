@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/dimensionalpocket/api-client-js#readme",
   "dependencies": {
-    "axios": "1.2.3",
+    "axios": "1.2.4",
     "axios-retry": "3.4.0",
     "qs": "6.11.0"
   },
